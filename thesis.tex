@@ -1,0 +1,109 @@
+\documentclass[master=ewtk,masteroption=ec]{kulemt}
+\setup{
+  title={Sensitivity aware process modeling from time series data},
+  author={Lode Van Herck},
+  promotor={Prof.\,dr.\,ir.\ Frank Naets},
+  assessor={dr.\,Ir.\, Shashwat Kushwaha \and Ir.\,Rik Vaerenberg},
+  assistant={Ir.\ Francisco Garcia}}
+% Remove the "%" on the next line for generating the cover page
+%\setup{coverpageonly}
+% Remove the "%" before the next "\setup" to generate only the first pages
+% (e.g., if you are a Word user).
+%\setup{frontpagesonly}
+
+% If you want to include other LaTeX packages, do it here. 
+
+% Finally the hyperref package is used for pdf files.
+% This can be commented out for printed versions.
+\usepackage[pdfusetitle,colorlinks,plainpages=false]{hyperref}
+\usepackage[table]{xcolor} % 'table'optie is handig voor cell backgrounds
+\usepackage{xltabular}    % combinatie van longtable + tabularx
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{xltabular,enumitem} 
+\usepackage[table]{xcolor} 
+\usepackage{pdflscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%OWN
+%gives automatic white space
+\setlength{\parskip}{1.2em}
+\setlength{\parindent}{0pt}
+
+\newcommand{\n}{\newpage}
+\renewcommand{\l}{\newline}
+
+%%%%%%%
+% The lipsum package is used to generate random text.
+% You never need this in a real master's thesis text!
+\IfFileExists{lipsum.sty}%
+ {\usepackage{lipsum}\SetLipsumDefault{11-13}}%
+ {\newcommand{\lipsum}[1][11-13]{\par And some text: lipsum ##1.\par}}
+%%%%%%%
+\usepackage{longtable}
+%%%%%%%
+%\includeonly{chapter-n}
+\begin{document}
+
+\begin{preface}
+This is my acknowledgment to thank everyone who has kept me busy.
+I would like to thank my supervisor, my advisor, and the entire jury.
+My family has also been very supportive, of course.
+\end{preface}
+
+\tableofcontents*
+
+\begin{abstract}
+  
+\end{abstract}
+
+% A list of figures and tables is optional
+%\listoffigures
+%\listoftables
+% If there are only a few figures and tables, it is better to use the following:
+\listoffiguresandtables
+% The list of symbols is also optional.
+% This list must be created manually, e.g. as follows:
+\chapter{List of abbreviations and symbols}
+\section*{abbreviations}
+\begin{flushleft}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
+
+
+  \end{tabularx}
+\end{flushleft}
+\section*{Symbols}
+\begin{flushleft}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
+
+
+  \end{tabularx}
+\end{flushleft}
+
+% Now comes the main text
+\mainmatter
+
+\include{intro}
+\include{chapter-1}
+\include{chapter-2}
+
+
+
+% ... and so on until
+\include{chapter-n}
+\include{conclusion}
+
+% If you have appendices:
+\appendixpage*          % if wanted
+\appendix
+\include{appendix-1}
+% ... and so on until
+\include{appendix-n}
+\backmatter
+% The bibliography comes after the appendices.
+% You can replace the standard "abbrv" bibliography style by another one.
+\bibliographystyle{abbrv}
+\bibliography{references}
+\include{CoC}
+\end{document}

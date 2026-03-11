@@ -1,0 +1,42 @@
+\chapter{Introduction}
+\label{cha:intro}
+
+Optimizing factory inputs has long been an important objective in industrial engineering. Since the early development of large-scale manufacturing, engineers have continuously searched for ways to improve how resources such as raw materials, energy, labor, and equipment are used. Early optimization efforts were mainly based on empirical knowledge and manual adjustments by operators who relied on experience to maintain stable and efficient production \cite{stanley1992}.
+
+As industrial systems became more complex, systematic methods from operations research and industrial engineering were introduced. Techniques such as linear programming, scheduling methods, and statistical process control helped operators and engineers manage production systems more efficiently while maintaining product quality and reducing costs.
+
+More recently, advances in computational power and data collection have further expanded the possibilities for industrial optimization. Modern factories increasingly rely on process data collected through sensors and monitoring systems. These developments are closely related to the emergence of Industry 4.0, where interconnected machines and real-time data allow operators to monitor processes more closely and respond more quickly to changing conditions \cite{ind4}.
+
+Although some visions of future manufacturing describe fully automated dark factories \cite{LightsOutManufacturing}, most industrial systems still rely heavily on human operators to supervise processes and make operational decisions. At the same time, not every aspect of industrial processes can be directly observed or measured. Hidden influences may still affect multiple variables in a system, which can complicate the interpretation of process data. As industrial systems become more complex, developing tools that help operators better understand these relationships becomes increasingly important.
+
+\n
+
+\section{Causal Discovery}
+
+Causal discovery aims to identify cause--effect relationships between variables from observational data. Instead of relying only on correlations, causal discovery methods attempt to reconstruct the underlying causal structure that generates the observed data. These structures are typically represented as directed graphs in which edges correspond to causal relations \cite{Spirtes2000}.
+
+Causal discovery has been applied in several domains where controlled experiments are difficult or expensive to perform. In economics, graphical causal discovery methods such as the PC and FCI algorithms have been applied to econometric datasets to analyze relationships between economic variables. For example, these methods have been used to study the dependency of corn exports on exchange rates, where graphical approaches produced better forecasts than traditional econometric search procedures. Similar techniques have also been applied to investigate relationships between farm and retail meat prices and to analyze international data on gross national product growth and the size of the agricultural sector in developing nations \cite{Spirtes2000}.
+
+Applications have also been explored in the medical domain. One study applied causal discovery algorithms to a database of hospitalized pneumonia patients in order to infer potential causal relations between clinical variables. The results obtained from the algorithm were compared with the causal judgments of physicians. For the relationships suggested by the algorithm, physicians consistently judged them to represent plausible cause--effect relations, illustrating the potential of data-driven causal discovery to support medical reasoning based on observational datasets \cite{Spirtes2000}.
+
+These examples illustrate how causal discovery methods can provide insights into complex systems using observational data. While such approaches have already been explored in fields such as economics and medicine, their application in manufacturing has remained limited \cite{Notyetman}. One possible reason is that industrial processes historically lacked the extensive and reliable data required for such analysis. With the increasing digitalization of factories and the growing availability of process data through Industry 4.0 technologies, however, new opportunities arise to apply causal discovery methods in manufacturing environments to support operators in understanding and improving complex production systems.
+
+\n
+
+\section{Goal}
+
+The goal of this thesis is to investigate how data driven methods can assist operators in understanding and improving the behavior of complex manufacturing processes. In particular, this work explores the application of causal discovery techniques to continuous process data originating from industrial systems.
+
+Modern manufacturing environments generate large amounts of sensor data describing the evolution of process variables over time. While this data contains valuable information about the interactions between variables, interpreting these relationships remains challenging for operators, especially in complex systems with many interacting components.
+
+A central difficulty arises from the presence of hidden variables. Not all relevant factors influencing a process can always be measured or recorded. Unobserved variables may affect multiple measured variables simultaneously, which can lead to misleading interpretations of the relationships observed in the data. Handling such hidden influences is therefore a key challenge when attempting to infer causal structure from observational process data.
+
+This thesis aims to evaluate whether causal discovery methods can help uncover meaningful relationships in manufacturing datasets and whether these insights could assist operators in analyzing and improving industrial processes. Particular attention is given to the robustness of these methods in the presence of hidden variables. In addition to this main challenge, other practical aspects such as the applicability of the methods to continuous industrial data and their interpretability for operators are also considered.
+
+\n
+
+\section{Structure}
+
+in chapter 2 we do..
+
+
